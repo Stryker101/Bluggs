@@ -22,8 +22,6 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
             holder.binding.tvTitle.text = post.title.uppercase()
             holder.binding.tvBody.text = post.body
             setOnClickListener {
-//                val action = PostsFragmentDirections.actionPostsFragmentToCommentsFragment(post)
-//                findNavController().navigate(action)
                 onItemClickListener?.let { it(post) }
             }
         }
